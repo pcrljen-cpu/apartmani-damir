@@ -93,8 +93,8 @@ h2.section-title em{font-style:italic;color:var(--sea)}
 /* APARTMENTS */
 .apartments{background:var(--white)}
 .apt-header{max-width:1000px;margin:0 auto 2.5rem;display:flex;justify-content:space-between;align-items:flex-end}
-.apt-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:2rem}
-.apt-card{border:1px solid var(--sand-dark);overflow:hidden;transition:box-shadow .3s,transform .3s}
+.apt-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
+.apt-card{border:1px solid var(--sand-dark);overflow:hidden;transition:box-shadow .3s,transform .3s;display:flex;flex-direction:column}
 .apt-card:hover{box-shadow:0 16px 50px rgba(26,107,138,.13);transform:translateY(-3px)}
 .apt-img{height:270px;overflow:hidden;position:relative}
 .apt-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
@@ -257,11 +257,11 @@ const T={
     a1badge:'Veliki',a1title:'Apartman 1',
     a1desc:'Prostran i komforan apartman za do 8 osoba s tri spavaće sobe, velikom dnevnom sobom, potpuno opremljenom kuhinjom, klimom, satelitskom TV, perilicama rublja i privatnim ulazom. Terasa s pogledom na more i vrt.',
     a1am:['🛏 3 spavaće sobe','🚽 2 WC / kupaone','🍳 Opremljena kuhinja','🛋 Dnevni boravak','🅿 Besplatan parking','❄️ Klima','🛏 Pomoćni krevet'],
-    a1price:'od €200',a1pl:'po noći',
+    a1price:'Cijena na upit',a1pl:'',
     a2badge:'Studio',a2title:'Apartman 2',
     a2desc:'Ugodni studio apartman za do 4 osobe s bračnim sobom, modernom kupaonicom, opremljenom kuhinjom s aparatom za kavu, klimom, satelitskom TV i balkonom s pogledom na more i otok Krapanj.',
     a2am:['🛏 Bračni krevet','🚿 Kupaonica','☕ Kava aparat','🌊 Pogled na more','🏖 Balkon','❄️ Klima','🛏 Pomoćni krevet'],
-    a2price:'od €90',a2pl:'po noći',aptBtn:'Upit',
+    a2price:'Cijena na upit',a2pl:'',aptBtn:'Upit',
     gTag:'Atrakcije',gH:'Život u',gHem:'Brodarici',gLead:'Brodarica je mirno turističko naselje uz grad Šibenik, 200 metara od mora. Iz ovog savršenog polazišta za tren oka dosežete neke od najljepših atrakcija cijele Dalmacije.',
     lTag:'Pronađite nas',lH:'Savršena',lHem:'lokacija',
     addr1:'Ribarska 45, Brodarica',addr2:'22000 Šibenik, Hrvatska',
@@ -304,11 +304,11 @@ const T={
     a1badge:'Large',a1title:'Apartment 1',
     a1desc:'Spacious and comfortable apartment for up to 8 guests with three bedrooms, a large living room, fully equipped kitchen, A/C, satellite TV, washing machine, and private entrance. Terrace with sea and garden views.',
     a1am:['🛏 3 bedrooms','🚽 2 bathrooms','🍳 Fully equipped kitchen','🛋 Living room','🅿 Free parking','❄️ A/C','🛏 Extra bed'],
-    a1price:'from €200',a1pl:'per night',
+    a1price:'Price on request',a1pl:'',
     a2badge:'Studio',a2title:'Apartment 2',
     a2desc:'Cosy studio apartment for up to 4 guests with a double bedroom, modern bathroom, equipped kitchen with coffee machine, A/C, satellite TV, and a balcony with sea and Krapanj island views.',
     a2am:['🛏 Double bed','🚿 Bathroom','☕ Coffee machine','🌊 Sea view','🏖 Balcony','❄️ A/C'],
-    a2price:'from €90',a2pl:'per night',aptBtn:'Enquire',
+    a2price:'Price on request',a2pl:'',aptBtn:'Enquire',
     gTag:'Attractions',gH:'Life in',gHem:'Brodarica',gLead:'Brodarica is a peaceful tourist settlement near the city of Šibenik, 200 metres from the sea. From this perfect base you can reach some of the most beautiful attractions in the entire region.',
     lTag:'Find Us',lH:'Perfectly',lHem:'placed',
     addr1:'Ribarska 45, Brodarica',addr2:'22000 Šibenik, Croatia',
@@ -351,11 +351,11 @@ const T={
     a1badge:'Groß',a1title:'Apartment 1',
     a1desc:'Geräumiges Apartment für bis zu 8 Personen mit drei Schlafzimmern, großem Wohnzimmer, voll ausgestatteter Küche, Klimaanlage, Sat-TV, Waschmaschine und privatem Eingang. Terrasse mit Meerblick.',
     a1am:['🛏 3 Schlafzimmer','🚽 2 Badezimmer','🍳 Ausgest. Küche','🛋 Wohnzimmer','🅿 Kostenl. Parken','❄️ Klima','🛏 Zustellbett'],
-    a1price:'ab €200',a1pl:'pro Nacht',
+    a1price:'Preis auf Anfrage',a1pl:'',
     a2badge:'Studio',a2title:'Apartment 2',
     a2desc:'Gemütliches Studio für bis zu 4 Personen mit Doppelbett, modernem Bad, ausgestatteter Küche mit Kaffeemaschine, Klimaanlage, Sat-TV und Balkon mit Meerblick.',
     a2am:['🛏 Doppelbett','🚿 Badezimmer','☕ Kaffeemaschine','🌊 Meerblick','🏖 Balkon','❄️ Klima','🛏 Zustellbett'],
-    a2price:'ab €90',a2pl:'pro Nacht',aptBtn:'Anfrage',
+    a2price:'Preis auf Anfrage',a2pl:'',aptBtn:'Anfrage',
     gTag:'Attraktionen',gH:'Leben in',gHem:'Brodarica',
     gLead:'Brodarica ist eine ruhige Touristensiedlung bei Šibenik, 200 Meter vom Meer. Von hier aus erreichen Sie die schönsten Sehenswürdigkeiten der Region.',
     lTag:'Uns finden',lH:'Perfekte',lHem:'Lage',
@@ -400,11 +400,11 @@ const T={
     a1badge:'Grande',a1title:'Appartamento 1',
     a1desc:'Appartamento spazioso per fino a 8 persone con tre camere da letto, ampio soggiorno, cucina completamente attrezzata, aria condizionata, TV satellitare e ingresso privato. Terrazza con vista sul mare.',
     a1am:['🛏 3 camere da letto','🚽 2 bagni','🍳 Cucina attrezzata','🛋 Soggiorno','🅿 Parcheggio gratis','❄️ A/C','🛏 Letto extra'],
-    a1price:'da €200',a1pl:'per notte',
+    a1price:'Prezzo su richiesta',a1pl:'per notte',
     a2badge:'Studio',a2title:'Appartamento 2',
     a2desc:'Accogliente studio per fino a 4 persone con letto matrimoniale, bagno moderno, cucina attrezzata con macchina del caffè, aria condizionata, TV satellitare e balcone con vista sul mare.',
     a2am:['🛏 Letto matrimoniale','🚿 Bagno','☕ Macchina caffè','🌊 Vista mare','🏖 Balcone','❄️ A/C','🛏 Letto extra'],
-    a2price:'da €90',a2pl:'per notte',aptBtn:'Richiesta',
+    a2price:'Prezzo su richiesta',a2pl:'per notte',aptBtn:'Richiesta',
     gTag:'Attrazioni',gH:'La vita a',gHem:'Brodarica',
     gLead:'Brodarica è un tranquillo insediamento turistico vicino a Šibenik, a 200 metri dal mare. Da qui si raggiungono facilmente le attrazioni più belle della regione.',
     lTag:'Trovaci',lH:'Posizione',lHem:'perfetta',
@@ -449,11 +449,11 @@ const T={
     a1badge:'Grand',a1title:'Appartement 1',
     a1desc:'Appartement spacieux pour jusqu\'à 8 personnes avec trois chambres, grand salon, cuisine entièrement équipée, climatisation, TV satellite et entrée privée. Terrasse avec vue sur la mer.',
     a1am:['🛏 3 chambres','🚽 2 salles de bain','🍳 Cuisine équipée','🛋 Salon','🅿 Parking gratuit','❄️ Clim','🛏 Lit d\'appoint'],
-    a1price:'dès €200',a1pl:'par nuit',
+    a1price:'Prix sur demande',a1pl:'par nuit',
     a2badge:'Studio',a2title:'Appartement 2',
     a2desc:'Studio confortable pour jusqu\'à 4 personnes avec lit double, salle de bain moderne, cuisine équipée avec cafetière, climatisation, TV satellite et balcon avec vue sur la mer.',
     a2am:['🛏 Lit double','🚿 Salle de bain','☕ Cafetière','🌊 Vue mer','🏖 Balcon','❄️ Clim','🛏 Lit d\'appoint'],
-    a2price:'dès €90',a2pl:'par nuit',aptBtn:'Demande',
+    a2price:'Prix sur demande',a2pl:'par nuit',aptBtn:'Demande',
     gTag:'Attractions',gH:'La vie à',gHem:'Brodarica',
     gLead:'Brodarica est un paisible village touristique près de Šibenik, à 200 mètres de la mer. D\'ici, vous atteignez facilement les plus belles attractions de la région.',
     lTag:'Nous trouver',lH:'Emplacement',lHem:'idéal',
@@ -498,11 +498,11 @@ const T={
     a1badge:'Nagy',a1title:'1. Apartman',
     a1desc:'Tágas apartman legfeljebb 8 fő részére, három hálószobával, nagy nappalival, teljesen felszerelt konyhával, légkondicionálóval, műholdas TV-vel és privát bejárattal. Terasz tengerre néző kilátással.',
     a1am:['🛏 3 hálószoba','🚽 2 fürdőszoba','🍳 Felszer. konyha','🛋 Nappali','🅿 Ingyenes parkoló','❄️ Légkondi','🛏 Pótágy'],
-    a1price:'€200-tól',a1pl:'éjszakánként',
+    a1price:'Ár érdeklődésre',a1pl:'éjszakánként',
     a2badge:'Stúdió',a2title:'2. Apartman',
     a2desc:'Hangulatos stúdió legfeljebb 4 fő részére, franciaággyal, modern fürdőszobával, felszerelt konyhával kávéfőzővel, légkondicionálóval, műholdas TV-vel és erkéllyel tengerre néző kilátással.',
     a2am:['🛏 Franciaágy','🚿 Fürdőszoba','☕ Kávéfőző','🌊 Tengerre néző','🏖 Erkély','❄️ Légkondi','🛏 Pótágy'],
-    a2price:'€90-től',a2pl:'éjszakánként',aptBtn:'Érdeklődés',
+    a2price:'Ár érdeklődésre',a2pl:'éjszakánként',aptBtn:'Érdeklődés',
     gTag:'Látnivalók',gH:'Élet',gHem:'Brodaricában',
     gLead:'Brodarica egy csendes turisztikai telep Šibenik mellett, 200 méterre a tengertől. Innen könnyen elérheti a régió legszebb látnivalóit.',
     lTag:'Megtalál minket',lH:'Tökéletes',lHem:'helyszín',
@@ -547,11 +547,11 @@ const T={
     a1badge:'Velký',a1title:'Apartmán 1',
     a1desc:'Prostorný apartmán pro až 8 osob se třemi ložnicemi, velkým obývacím pokojem, plně vybavenou kuchyní, klimatizací, satelitní TV a soukromým vchodem. Terasa s výhledem na moře.',
     a1am:['🛏 3 ložnice','🚽 2 koupelny','🍳 Vybavená kuchyně','🛋 Obývací pokoj','🅿 Bezpl. parkování','❄️ Klimatizace','🛏 Přistýlka'],
-    a1price:'od €200',a1pl:'za noc',
+    a1price:'Cijena na upit',a1pl:'za noc',
     a2badge:'Studio',a2title:'Apartmán 2',
     a2desc:'Útulné studio pro až 4 osoby s manželskou postelí, moderní koupelnou, vybavenou kuchyní s kávovarem, klimatizací, satelitní TV a balkonem s výhledem na moře.',
     a2am:['🛏 Manželská postel','🚿 Koupelna','☕ Kávovar','🌊 Výhled na moře','🏖 Balkon','❄️ Klimatizace','🛏 Přistýlka'],
-    a2price:'od €90',a2pl:'za noc',aptBtn:'Dotaz',
+    a2price:'Cijena na upit',a2pl:'za noc',aptBtn:'Dotaz',
     gTag:'Atrakce',gH:'Život v',gHem:'Brodarici',
     gLead:'Brodarica je klidná turistická osada u Šibeniku, 200 metrů od moře. Odtud snadno dosáhnete nejkrásnějších atrakcí celého regionu.',
     lTag:'Najděte nás',lH:'Perfektní',lHem:'poloha',
@@ -596,11 +596,11 @@ const T={
     a1badge:'Duży',a1title:'Apartament 1',
     a1desc:'Przestronny apartament dla maksymalnie 8 osób z trzema sypialniami, dużym salonem, w pełni wyposażoną kuchnią, klimatyzacją, telewizją satelitarną i prywatnym wejściem. Taras z widokiem na morze.',
     a1am:['🛏 3 sypialnie','🚽 2 łazienki','🍳 Wypos. kuchnia','🛋 Salon','🅿 Bezpłatny parking','❄️ Klimatyzacja','🛏 Łóżko dostawne'],
-    a1price:'od €200',a1pl:'za noc',
+    a1price:'Cijena na upit',a1pl:'za noc',
     a2badge:'Studio',a2title:'Apartament 2',
     a2desc:'Przytulne studio dla maksymalnie 4 osób z łóżkiem małżeńskim, nowoczesną łazienką, wyposażoną kuchnią z ekspresem do kawy, klimatyzacją, telewizją satelitarną i balkonem z widokiem na morze.',
     a2am:['🛏 Łóżko małżeńskie','🚿 Łazienka','☕ Ekspres do kawy','🌊 Widok na morze','🏖 Balkon','❄️ Klimatyzacja','🛏 Łóżko dostawne'],
-    a2price:'od €90',a2pl:'za noc',aptBtn:'Zapytanie',
+    a2price:'Cijena na upit',a2pl:'za noc',aptBtn:'Zapytanie',
     gTag:'Atrakcje',gH:'Życie w',gHem:'Brodaricy',
     gLead:'Brodarica to spokojna miejscowość turystyczna koło Šibeniku, 200 metrów od morza. Stąd łatwo dotrzesz do najpiękniejszych atrakcji całego regionu.',
     lTag:'Znajdź nas',lH:'Idealna',lHem:'lokalizacja',
@@ -713,7 +713,7 @@ function setLang(l){
   g('l-apt').textContent=t.lApt;g('l-gosti').textContent=t.lGosti;g('l-msg').textContent=t.lMsg;
   g('inp-ime').placeholder=t.phIme;g('inp-prez').placeholder=t.phPrez;g('inp-msg').placeholder=t.phMsg;
   g('sel-apt').innerHTML=`<option>${t.o1}</option><option>${t.o2}</option>`;
-  g('sel-g').innerHTML=t.gg.map(v=>`<option>${v}</option>`).join('');
+  updateGuests();
   g('send-btn').textContent=t.sendBtn;g('success-msg').textContent=t.successMsg;
   g('ct-ph').textContent=t.ctPh;g('ct-em').textContent=t.ctEm;g('ct-addr').textContent=t.ctAddr;
   // Footer
@@ -743,6 +743,7 @@ function setLang(l){
   });
   const bl=document.getElementById('booking-badge-label');if(bl)bl.textContent=({'hr':'Pogledajte nas na','en':'View us on','de':'Besuchen Sie uns auf','it':'Visitateci su','fr':'Retrouvez-nous sur','hu':'Látogasson el hozzánk','cs':'Navštivte nás na','pl':'Odwiedź nas na'})[l]||'Pogledajte nas na';
   updateGuests();
+  if(g('f-attr'))g('f-attr').textContent=t.navAttr;
   if(g('f-info'))g('f-info').textContent=t.navInfo;
   g('f-about').textContent=t.fAbout;g('f-apt').textContent=t.fApt;
   g('f-loc').textContent=t.fLoc;g('f-book').textContent=t.fBook;g('f-copy').textContent=t.fCopy;
@@ -979,7 +980,7 @@ document.addEventListener('click',function(e){
           <span class="apt-amenity" id="a1am7">🛏 Pomoćni krevet</span>
         </div>
         <div class="apt-price">
-          <div><div class="price-num" id="a1-price">od €200</div><div class="price-label" id="a1-pl">po noći</div></div>
+          <div><div class="price-num" id="a1-price">Cijena na upit</div><div class="price-label" id="a1-pl">po noći</div></div>
           <a href="#booking" class="btn-primary apt-btn" style="padding:.6rem 1.2rem;font-size:.72rem">Upit</a>
         </div>
       </div>
@@ -1005,7 +1006,7 @@ document.addEventListener('click',function(e){
           <span class="apt-amenity" id="a2am7">🛏 Pomoćni krevet</span>
         </div>
         <div class="apt-price">
-          <div><div class="price-num" id="a2-price">od €90</div><div class="price-label" id="a2-pl">po noći</div></div>
+          <div><div class="price-num" id="a2-price">Cijena na upit</div><div class="price-label" id="a2-pl">po noći</div></div>
           <a href="#booking" class="btn-primary apt-btn" style="padding:.6rem 1.2rem;font-size:.72rem">Upit</a>
         </div>
       </div>
@@ -1317,7 +1318,7 @@ document.addEventListener('click',function(e){
         </div>
         <div class="contact-item">
           <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
-          <div><div class="contact-label" id="ct-em">Email</div><div class="contact-value" style="color:var(--text-muted);font-size:.9rem">damir.crljen@si.t-com.hr</div></div>
+          <div><div class="contact-label" id="ct-em">Email</div><div class="contact-value" style="color:var(--text-muted);font-size:.9rem">pcrljen@gmail.com</div></div>
         </div>
         <div class="contact-item">
           <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
@@ -1384,6 +1385,7 @@ document.addEventListener('click',function(e){
   <div class="footer-links">
     <a href="#about" id="f-about">O nama</a>
     <a href="#apartments" id="f-apt">Apartmani</a>
+    <a href="#gallery" id="f-attr">Atrakcije</a>
     <a href="#info-section" id="f-info">Informacije</a>
     <a href="#location" id="f-loc">Lokacija</a>
     <a href="#booking" id="f-book">Rezerviraj</a>
@@ -1414,40 +1416,61 @@ document.getElementById('inp-dol').addEventListener('change',function(){document
 
 // Form
 function submitForm(){
-  const req=['inp-ime','inp-prez','inp-email','inp-dol','inp-odl'];
+  const req=["inp-ime","inp-prez","inp-email","inp-dol","inp-odl"];
   let ok=true;
-  req.forEach(id=>{const el=document.getElementById(id);if(!el.value.trim()){el.style.borderColor='#c9524a';ok=false}else el.style.borderColor=''});
+  req.forEach(id=>{const el=document.getElementById(id);if(!el||!el.value.trim()){if(el)el.style.borderColor="#c9524a";ok=false;}else el.style.borderColor="";});
   if(!ok)return;
-
-  const ime=document.getElementById('inp-ime').value.trim();
-  const prez=document.getElementById('inp-prez').value.trim();
-  const email=document.getElementById('inp-email').value.trim();
-  const dol=document.getElementById('inp-dol').value;
-  const odl=document.getElementById('inp-odl').value;
-  const apt=document.getElementById('sel-apt').value;
-  const gosti=document.getElementById('sel-g').value;
-  const poruka=document.getElementById('inp-msg').value.trim();
-
-  const subject=encodeURIComponent('Upit za rezervaciju — ' + apt);
-  const body=encodeURIComponent(
-    'Ime i prezime: ' + ime + ' ' + prez + '\n' +
-    'Email: ' + email + '\n' +
-    'Dolazak: ' + dol + '\n' +
-    'Odlazak: ' + odl + '\n' +
-    'Apartman: ' + apt + '\n' +
-    'Broj gostiju: ' + gosti + '\n' +
-    (poruka ? 'Poruka: ' + poruka : '')
-  );
-
-  window.location.href = 'mailto:damir.crljen@si.t-com.hr?subject=' + subject + '&body=' + body;
-
-  const msg=document.getElementById('success-msg');
-  const lang=document.querySelector('.lang-btn.active')?.dataset.lang||'hr';
-  msg.textContent=lang==='en'
-    ?'✓ Your email client is opening — send the message and we will get back to you within 24 hours.'
-    :'✓ Otvara se vaš email klijent — pošaljite poruku i javit ćemo vam se u roku od 24 sata.';
-  msg.classList.add('show');
-  setTimeout(()=>msg.classList.remove('show'),5000);
+  const ime=document.getElementById("inp-ime").value.trim();
+  const prez=document.getElementById("inp-prez").value.trim();
+  const email=document.getElementById("inp-email").value.trim();
+  const dol=document.getElementById("inp-dol").value;
+  const odl=document.getElementById("inp-odl").value;
+  const apt=document.getElementById("sel-apt").value;
+  const gosti=document.getElementById("sel-g").value;
+  const poruka=document.getElementById("inp-msg").value.trim();
+  const btn=document.getElementById("send-btn");
+  const msg=document.getElementById("success-msg");
+  btn.disabled=true;
+  btn.textContent="Šalje se...";
+  fetch("https://formspree.io/f/xrejjjjb",{
+    method:"POST",
+    headers:{"Content-Type":"application/json","Accept":"application/json"},
+    body:JSON.stringify({
+      ime_i_prezime:ime+" "+prez,
+      email:email,
+      apartman:apt,
+      dolazak:dol,
+      odlazak:odl,
+      broj_gostiju:gosti,
+      poruka:poruka||"—",
+      _subject:"Upit za rezervaciju — "+apt
+    })
+  })
+  .then(r=>r.json())
+  .then(data=>{
+    if(data.ok){
+      msg.textContent="✓ Upit je uspješno poslan! Javit ćemo vam se u roku od 24 sata.";
+      msg.style.color="#2a8fb5";
+      msg.classList.add("show");
+      ["inp-ime","inp-prez","inp-email","inp-dol","inp-odl","inp-msg"].forEach(id=>{const el=document.getElementById(id);if(el)el.value="";});
+      setTimeout(()=>msg.classList.remove("show"),6000);
+    } else {
+      msg.textContent="Greška pri slanju. Molimo pokušajte ponovo.";
+      msg.style.color="#c9524a";
+      msg.classList.add("show");
+      setTimeout(()=>msg.classList.remove("show"),5000);
+    }
+    btn.disabled=false;
+    btn.textContent="Pošalji upit";
+  })
+  .catch(()=>{
+    msg.textContent="Greška pri slanju. Provjerite internet vezu.";
+    msg.style.color="#c9524a";
+    msg.classList.add("show");
+    setTimeout(()=>msg.classList.remove("show"),5000);
+    btn.disabled=false;
+    btn.textContent="Pošalji upit";
+  });
 }
 
 // Lightbox
@@ -1560,5 +1583,105 @@ document.getElementById('apt-modal').addEventListener('touchend',e=>{const dx=e.
 // Update attr card text on language switch (hook into existing lang system)
 const _origSetLang=window.setLang;
 </script>
+
+<script>
+// Booking.com iCal sync via proxy
+const ICAL_APT1 = "https://ical.booking.com/v1/export?t=f5c7908a-bdf9-45cf-9e2b-736a27fa47f9";
+const ICAL_APT2 = "https://ical.booking.com/v1/export?t=f1378229-9049-47aa-a09a-7917bbc6c8f2";
+
+let bookedDates = {apt1: [], apt2: []};
+
+function parseIcal(text) {
+  const dates = [];
+  const events = text.split('BEGIN:VEVENT');
+  events.forEach(event => {
+    const dtstart = event.match(/DTSTART[^:]*:(\d{8})/);
+    const dtend = event.match(/DTEND[^:]*:(\d{8})/);
+    if (dtstart && dtend) {
+      let start = new Date(dtstart[1].replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3'));
+      const end = new Date(dtend[1].replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3'));
+      while (start < end) {
+        dates.push(start.toISOString().split('T')[0]);
+        start.setDate(start.getDate() + 1);
+      }
+    }
+  });
+  return dates;
+}
+
+function fetchIcal(url, apt) {
+  const proxy = 'https://api.allorigins.win/get?url=' + encodeURIComponent(url);
+  fetch(proxy)
+    .then(r => r.json())
+    .then(data => {
+      bookedDates[apt] = parseIcal(data.contents);
+      console.log(apt + ' zauzeti datumi:', bookedDates[apt].length);
+    })
+    .catch(e => console.log('iCal error:', e));
+}
+
+// Fetch on load
+document.addEventListener('DOMContentLoaded', () => {
+  fetchIcal(ICAL_APT1, 'apt1');
+  fetchIcal(ICAL_APT2, 'apt2');
+});
+
+// Check if selected dates are available
+function checkAvailability(apt, checkin, checkout) {
+  const dates = bookedDates[apt];
+  let d = new Date(checkin);
+  const end = new Date(checkout);
+  while (d < end) {
+    const ds = d.toISOString().split('T')[0];
+    if (dates.includes(ds)) return false;
+    d.setDate(d.getDate() + 1);
+  }
+  return true;
+}
+
+// Hook into date inputs to show availability warning
+function checkDatesOnChange() {
+  const checkin = document.getElementById('inp-dol')?.value;
+  const checkout = document.getElementById('inp-odl')?.value;
+  const aptEl = document.getElementById('sel-apt');
+  if (!checkin || !checkout || !aptEl) return;
+  
+  const apt = aptEl.value.includes('2') ? 'apt2' : 'apt1';
+  const available = checkAvailability(apt, checkin, checkout);
+  
+  let warning = document.getElementById('avail-warning');
+  if (!warning) {
+    warning = document.createElement('div');
+    warning.id = 'avail-warning';
+    warning.style.cssText = 'padding:.6rem 1rem;border-radius:2px;font-size:.82rem;font-family:Jost,sans-serif;margin-top:.5rem;display:none;';
+    const dolEl = document.getElementById('inp-odl');
+    if (dolEl) dolEl.parentElement.parentElement.after(warning);
+  }
+  
+  if (!available) {
+    warning.style.display = 'block';
+    warning.style.background = '#fde8e8';
+    warning.style.color = '#c9524a';
+    warning.style.border = '1px solid #c9524a';
+    warning.textContent = '⚠ Odabrani termini su već rezervirani. Molimo odaberite druge datume.';
+  } else if (checkin && checkout) {
+    warning.style.display = 'block';
+    warning.style.background = '#e8f5e9';
+    warning.style.color = '#2e7d32';
+    warning.style.border = '1px solid #2e7d32';
+    warning.textContent = '✓ Odabrani termini su slobodni!';
+  } else {
+    warning.style.display = 'none';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  ['inp-dol','inp-odl','sel-apt'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('change', checkDatesOnChange);
+  });
+});
+</script>
+
 </body>
 </html>
